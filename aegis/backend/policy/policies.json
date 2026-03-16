@@ -1,0 +1,20 @@
+{
+  "policies": [
+    {
+      "id": "block-pii",
+      "name": "Block PII",
+      "enabled": true,
+      "entities": ["PERSON", "EMAIL_ADDRESS", "PHONE_NUMBER", "CREDIT_CARD", "US_SSN"],
+      "action": "BLOCK",
+      "severity_threshold": 0.7
+    },
+    {
+      "id": "redact-financial",
+      "name": "Redact Financial Data",
+      "enabled": true,
+      "entities": ["CREDIT_CARD", "IBAN_CODE", "US_BANK_NUMBER"],
+      "action": "REDACT",
+      "severity_threshold": 0.5
+    }
+  ]
+}
