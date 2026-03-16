@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --aegis-card: #111827;
+  --aegis-border: #1f2937;
+  --aegis-accent: #3b82f6;
+  --aegis-muted: #6b7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-aegis-card: var(--aegis-card);
+  --color-aegis-border: var(--aegis-border);
+  --color-aegis-accent: var(--aegis-accent);
+  --color-aegis-muted: var(--aegis-muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
