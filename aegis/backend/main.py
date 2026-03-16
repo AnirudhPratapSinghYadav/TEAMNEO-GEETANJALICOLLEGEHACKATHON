@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Placeholder router imports — will be wired up once modules are implemented
-# from proxy.router import router as proxy_router
+from proxy.router import router as proxy_router
 # from api.dashboard import router as dashboard_router
 # from api.admin import router as admin_router
 
@@ -22,8 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Placeholder router registrations
-# app.include_router(proxy_router, prefix="/proxy", tags=["Proxy"])
+# Register the proxy router at root level so the path becomes /v1/chat/completions
+app.include_router(proxy_router, prefix="", tags=["Proxy"])
 # app.include_router(dashboard_router, prefix="/dashboard", tags=["Dashboard"])
 # app.include_router(admin_router, prefix="/admin", tags=["Admin"])
 
